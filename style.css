@@ -1,0 +1,1191 @@
+
+/* =========================================
+   ESTÉTICA DANIELE TRINCE
+   Design elegante, moderno e responsivo
+========================================= */
+
+/* 1. CONFIGURAÇÕES GERAIS */
+
+:root {
+  --cream: #faf7f2;
+  --white: #ffffff;
+  --beige: #eee5da;
+  --rose: #d9a6a5;
+  --rose-dark: #b9797b;
+  --gold: #b89a65;
+  --brown: #59453f;
+  --text: #514641;
+  --muted: #887d76;
+  --border: #e8ded5;
+  --shadow: 0 12px 35px rgba(76, 52, 43, 0.08);
+  --radius: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container,
+.header,
+.footer-main,
+.footer-bottom {
+  width: min(1160px, 90%);
+  margin-inline: auto;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--brown);
+}
+
+p {
+  color: var(--muted);
+}
+
+::selection {
+  background: var(--rose);
+  color: var(--white);
+}
+
+/* 2. CABEÇALHO */
+
+.header {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.header {
+  position: relative;
+  z-index: 100;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 247, 242, 0.96);
+  border-bottom: 1px solid rgba(232, 222, 213, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.logo-symbol {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--rose-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.logo strong {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brown);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.logo small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav a {
+  color: var(--text);
+  font-size: 13px;
+  transition: color 0.25s ease;
+}
+
+.nav a:hover {
+  color: var(--rose-dark);
+}
+
+.nav .button {
+  color: var(--white);
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 18px;
+  height: 2px;
+  background: var(--brown);
+  border-radius: 2px;
+}
+
+/* 3. BOTÕES */
+
+.button {
+  min-height: 49px;
+  padding: 13px 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: var(--rose-dark);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button:hover {
+  background: var(--brown);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.button-small {
+  min-height: 42px;
+  padding: 10px 17px;
+  font-size: 12px;
+}
+
+.button-outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--brown);
+}
+
+.button-outline:hover {
+  background: var(--white);
+  border-color: var(--rose);
+  color: var(--brown);
+}
+
+/* 4. PRIMEIRA SEÇÃO — HERO */
+
+.hero {
+  min-height: 650px;
+  padding: 65px 0;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.hero-content {
+  padding: 25px 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: var(--rose-dark);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero h1 {
+  max-width: 620px;
+  margin-bottom: 24px;
+  font-size: clamp(40px, 5vw, 65px);
+  letter-spacing: -1.5px;
+}
+
+.hero h1 em {
+  color: var(--rose-dark);
+  font-weight: 400;
+}
+
+.hero-content > p {
+  max-width: 480px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-note {
+  display: block;
+  margin-top: 24px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stars {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.hero-image {
+  position: relative;
+  min-width: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 48% 48% 8px 8px;
+}
+
+.image-caption {
+  position: absolute;
+  right: -20px;
+  bottom: 28px;
+  max-width: 225px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.image-caption span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.image-caption strong {
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* 5. FAIXA DE DIFERENCIAIS */
+
+.benefits {
+  padding: 28px 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.benefit-number {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--rose-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+}
+
+.benefits > div {
+  text-align: center;
+}
+
+.benefits p {
+  font-size: 12px;
+}
+
+/* 6. SEÇÕES GERAIS */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  justify-content: center;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-info h2 {
+  margin-bottom: 20px;
+  font-size: clamp(32px, 4vw, 46px);
+}
+
+.section-heading > p {
+  max-width: 570px;
+  margin-inline: auto;
+  font-size: 14px;
+}
+
+/* 7. SOBRE A PROFISSIONAL */
+
+.about {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-content > p {
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.about-content .eyebrow {
+  margin-bottom: 18px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--gold);
+  color: var(--brown);
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--rose-dark);
+}
+
+/* 8. TRATAMENTOS */
+
+.treatments {
+  background: var(--white);
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.treatment-card {
+  overflow: hidden;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.treatment-card > img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.treatment-card:hover > img {
+  transform: scale(1.035);
+}
+
+.card-content {
+  position: relative;
+  padding: 25px;
+  background: var(--cream);
+}
+
+.card-number {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.card-content h3 {
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.card-content p {
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.treatment-extra {
+  margin-top: 35px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+}
+
+.extra-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--rose-dark);
+  font-size: 22px;
+}
+
+.treatment-extra p {
+  flex: 1;
+  font-size: 13px;
+}
+
+.disclaimer {
+  margin-top: 25px;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* 9. AVALIAÇÕES */
+
+.reviews {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  align-items: center;
+  gap: 65px;
+  padding: 65px;
+  background: var(--beige);
+}
+
+.rating {
+  text-align: center;
+}
+
+.rating strong {
+  display: block;
+  margin: 10px 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.rating p {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.reviews h2 {
+  margin-bottom: 18px;
+  font-size: 35px;
+}
+
+.reviews > div:last-child > p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* 10. INSTAGRAM */
+
+.instagram {
+  text-align: center;
+}
+
+.instagram .section-heading {
+  margin-bottom: 35px;
+}
+
+.instagram-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.social-card {
+  min-width: 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+  background: var(--white);
+  border: 1px solid var(--border);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.social-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #f3e5e2;
+  color: var(--rose-dark);
+  font-size: 23px;
+}
+
+.social-card strong {
+  display: block;
+  color: var(--brown);
+  font-size: 14px;
+}
+
+.social-card p {
+  margin-top: 4px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* 11. CONTATO E LOCALIZAÇÃO */
+
+.contact {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.contact-info > p {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 23px;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--beige);
+  color: var(--rose-dark);
+  font-size: 17px;
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--brown);
+  font-size: 13px;
+}
+
+.contact-item p,
+.contact-item a {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+  color: var(--rose-dark);
+}
+
+.contact-info > .button {
+  margin-top: 10px;
+}
+
+.map-container {
+  overflow: hidden;
+  min-height: 430px;
+  background: var(--beige);
+  border: 1px solid var(--border);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 430px;
+  border: 0;
+}
+
+.map-link {
+  display: block;
+  padding: 15px;
+  background: var(--white);
+  color: var(--brown);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* 12. RODAPÉ */
+
+footer {
+  background: #453832;
+  color: var(--white);
+}
+
+.footer-main {
+  padding-top: 55px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 45px;
+}
+
+.footer-logo {
+  margin-bottom: 15px;
+}
+
+.footer-logo .logo-symbol {
+  border-color: var(--gold);
+  color: #e8c6c2;
+}
+
+.footer-logo strong {
+  color: var(--white);
+}
+
+.footer-logo small {
+  color: #d3c4ba;
+}
+
+.footer-main > div:first-child > p {
+  max-width: 300px;
+  color: #d3c4ba;
+  font-size: 12px;
+}
+
+.footer-main h3 {
+  margin-bottom: 17px;
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #d3c4ba;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #f0c9c6;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  color: #d3c4ba;
+  font-size: 11px;
+}
+
+/* 13. BOTÃO FLUTUANTE DO WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: var(--white);
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+}
+
+.whatsapp-float svg {
+  width: 29px;
+  height: 29px;
+}
+
+.whatsapp-float .float-label {
+  position: absolute;
+  right: 72px;
+  padding: 9px 13px;
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--brown);
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(5px);
+  transition: 0.2s ease;
+}
+
+.whatsapp-float:hover .float-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 14. ACESSIBILIDADE */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* 15. TABLETS */
+
+@media (max-width: 1000px) {
+  .nav {
+    gap: 16px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    gap: 35px;
+    min-height: 560px;
+  }
+
+  .hero-image img {
+    height: 460px;
+  }
+
+  .about {
+    gap: 40px;
+  }
+
+  .reviews {
+    padding: 40px;
+    gap: 35px;
+  }
+
+  .treatment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-main {
+    gap: 25px;
+  }
+}
+
+/* 16. CELULARES */
+
+@media (max-width: 760px) {
+  .container,
+  .header,
+  .footer-main,
+  .footer-bottom {
+    width: min(100% - 36px, 560px);
+  }
+
+  html {
+    scroll-padding-top: 75px;
+  }
+
+  .header {
+    min-height: 74px;
+  }
+
+  .logo-symbol {
+    width: 39px;
+    height: 39px;
+    font-size: 19px;
+  }
+
+  .logo strong {
+    font-size: 15px;
+  }
+
+  .logo small {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 8px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav a.button {
+    margin-top: 12px;
+    justify-content: center;
+    border-bottom: 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 10vw, 52px);
+    letter-spacing: -0.8px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-image {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    height: 390px;
+  }
+
+  .image-caption {
+    right: -18px;
+    bottom: 18px;
+    max-width: 190px;
+    padding: 15px;
+  }
+
+  .image-caption strong {
+    font-size: 15px;
+  }
+
+  .benefits {
+    padding: 25px 18px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .benefit-number {
+    font-size: 23px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2,
+  .about-content h2,
+  .contact-info h2 {
+    font-size: 34px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image img {
+    height: 390px;
+  }
+
+  .treatment-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .treatment-card > img {
+    height: 245px;
+  }
+
+  .card-content {
+    padding: 22px;
+  }
+
+  .treatment-extra {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .treatment-extra p {
+    flex-basis: calc(100% - 70px);
+  }
+
+  .treatment-extra .button {
+    width: 100%;
+  }
+
+  .reviews {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 22px;
+  }
+
+  .rating strong {
+    font-size: 60px;
+  }
+
+  .reviews h2 {
+    font-size: 30px;
+  }
+
+  .instagram-links {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    padding: 22px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .map-container,
+  .map-container iframe {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .footer-main {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+  }
+
+  .footer-main > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .whatsapp-float .float-label {
+    display: none;
+  }
+}
+
+/* 17. CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+  .container,
+  .header,
+  .footer-main,
+  .footer-bottom {
+    width: calc(100% - 28px);
+  }
+
+  .logo {
+    gap: 7px;
+  }
+
+  .logo strong {
+    font-size: 13px;
+  }
+
+  .logo small {
+    font-size: 7px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .button {
+    width: 100%;
+  }
+
+  .hero-image img {
+    height: 320px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-main > div:first-child {
+    grid-column: auto;
+  }
+}
+
+/* 18. MOVIMENTO REDUZIDO */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
